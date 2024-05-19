@@ -1,4 +1,3 @@
-#******Write your code here :-)
 from vpython import *
 L1 = 1
 L2 = 1
