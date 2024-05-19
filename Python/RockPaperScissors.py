@@ -1,4 +1,3 @@
-# Write your code here :-)
 import random, sys
 
 print('Rock, Paper, Scissors')
