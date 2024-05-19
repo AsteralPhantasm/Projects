@@ -1,4 +1,4 @@
-# Write your code here :-)
+
 import sys
 
 def collatz(number):
