@@ -1,4 +1,3 @@
-# Write your code here :-)
 import numpy as np
 
 def vol7D(N):
