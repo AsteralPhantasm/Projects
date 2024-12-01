@@ -1,1 +1,1 @@
-This is a folder full of SQL queries to navigate a given movie database from IMDB given some prompts.
+This is a folder full of SQL queries to navigate a movie database from IMDB given some prompts.
