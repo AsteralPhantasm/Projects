@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_answers = document.querySelectorAll('.right');
+                let right_answers1 = document.querySelectorAll('.right1');
+                for (let i = 0; i < right_answers.length; i++) {
+                    right_answers[i].addEventListener('click', function() {
+                        right_answers[i].style.backgroundColor = 'Green';
+                        right_answers[i].parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                    });
+                }
+                for (let i = 0; i < right_answers1.length; i++) {
+                    right_answers1[i].addEventListener('click', function() {
+                        right_answers1[i].style.backgroundColor = 'Green';
+                        right_answers1[i].parentElement.querySelector('.feedback1').innerHTML = 'Correct!';
+                    });
+                }
+                let wrong_answers = document.querySelectorAll(".wrong");
+                let wrong_answers1 = document.querySelectorAll(".wrong1");
+                for (let i = 0; i < wrong_answers.length; i++) {
+                    wrong_answers[i].addEventListener('click', function() {
+                        wrong_answers[i].style.backgroundColor = 'Red';
+                        wrong_answers[i].parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+                    });
+                for (let i = 0; i < wrong_answers1.length; i++) {
+                    wrong_answers1[i].addEventListener('click', function() {
+                        wrong_answers1[i].style.backgroundColor = 'Red';
+                        wrong_answers1[i].parentElement.querySelector('.feedback1').innerHTML = 'Incorrect';
+                    });
+                }
+                }
+                document.querySelector('#check').addEventListener('click', function() {
+                    let input = document.querySelector('input');
+                    if (input.value == 'Edmund Hillary') {
+                        input.style.backgroundColor = 'green';
+                        input.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                    }
+                    else {
+                        input.style.backgroundColor = 'red';
+                        input.parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h2> Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>1. What year was America founded?</h3>
+                <button class = "wrong">1945</button>
+                <button class = "right">1776</button>
+                <button class = "wrong">1805</button>
+                <button class = "wrong">1643</button>
+                <p class="feedback"></p>
+                <hr>
+                <h3>2. Where is Paris located?</h3>
+                <button class = "right1">France</button>
+                <button class = "wrong1">Germany</button>
+                <button class = "wrong1">Brazil</button>
+                <button class = "wrong1">Egypt</button>
+                <p class="feedback1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>1. Who was the first person to climb Mount Everest?</h3>
+                <input type="text"></input>
+                <button id="check">Check Answer</button>
+                <p class="feedback"></p>
+            </div>
+        </div>
+    </body>
+</html>
